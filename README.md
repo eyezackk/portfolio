@@ -9,7 +9,7 @@ On this site, you'll find:
 -  **Anime Faves**: A curated list of my favorite anime, because why not mix tech with anime? 
 -  **Ongoing Journey**: Follow my growth as I pursue my degree, explore new technologies, and tackle exciting challenges in the tech industry!
 
--  TODO:
+**TODO**:
 -    Fix work history
 -    Relevant courses
 -    Update project
