@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This site was purely made with HTML and typescript, and was one of my first frontend project :)!",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyezackk/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eyezackk/portfolio/issues"
+  },
+  "homepage": "https://github.com/eyezackk/portfolio#readme",
+  "dependencies": {
+    "trazo-stickers": "^0.2.0"
+  }
+}
