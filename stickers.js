@@ -1,4 +1,4 @@
-import { findSticker, toSvgString } from "trazo-stickers/svg";
+import { findSticker, toSvgString } from "./vendor/trazo-stickers.js";
 
 document.querySelectorAll("[data-sticker]").forEach(function (slot) {
     var def = findSticker(slot.getAttribute("data-sticker"));
