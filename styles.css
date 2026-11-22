@@ -273,12 +273,24 @@ body {
 }
 
 .name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin: 0;
-    font-size: clamp(34px, 6vw, 40px);
+    font-family: "Caveat", cursive;
+    font-size: clamp(64px, 12vw, 92px);
     font-weight: 600;
-    letter-spacing: -0.035em;
-    line-height: 1;
+    letter-spacing: 0.01em;
+    line-height: 0.8;
     text-shadow: 0 1px 2px #07080bcc;
+}
+
+.lockup-mark {
+    display: block;
+    width: 0.62em;
+    height: 0.62em;
+    flex: none;
+    border-radius: 0.16em;
 }
 
 .socials {
@@ -353,8 +365,53 @@ body {
     margin: 16px 0 0;
 }
 
-.intro .tagline {
-    margin-top: 8px;
+.stack-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stack-pills li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px 7px 10px;
+    border: 1px solid #ffffff16;
+    border-radius: 999px;
+    background: #14161cd9;
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    text-shadow: none;
+}
+
+.stack-pills img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex: none;
+}
+
+.intro .banner-lead {
+    max-width: 36em;
+    margin-top: 16px;
+    color: #9aa1a9;
+    font-size: 18.5px;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px #07080bcc;
+}
+
+.dither-row {
+    display: block;
+    width: min(100%, 560px);
+    height: auto;
+    margin: 26px 0 2px;
 }
 
 .degree,
