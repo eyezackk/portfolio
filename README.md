@@ -2,9 +2,9 @@
 
 <img src="banner.png" alt="Portfolio. A software engineer from Norway. The work, the projects, and a sky that follows the weather in Oslo.">
 
-Software engineer in Oslo. I build trading tools and agentic pipelines for financial institutions.
+My journey started at 12, developing Spigot plugins for Minecraft, and at 15, I began exploring financial markets through crypto. Since then, I've taken that curiosity from hobby projects to professional software and finance, working across leading Nordic institutions in sovereign wealth management and investment banking.
 
-I work as a full-stack engineer at Arctic Securities. Before that I was a software developer at Norges Bank Investment Management. I studied Informatics at the University of Oslo, and I have worked in security since I was 15.
+I studied Informatics at the University of Oslo, and I have worked in security since I was 15.
 
 ## The site
 
@@ -16,12 +16,13 @@ The layout is a single column. A dithered sky sits behind the header, then the j
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The copy, the sections, and the import map for the stickers |
+| `index.html` | The copy and the sections |
 | `styles.css` | Layout, type, and the colors that follow the weather |
 | `site.js` | Sky, Oslo clock, weather, language flags, and the anime shelf |
 | `stickers.js` | Places the hand-drawn icons in the project list |
-| `icons/` | Small marks on the technology chips, plus the dither ramp under the title |
-| `banner.png` | The same header, saved for this page and for link previews |
+| `vendor/trazo-stickers.js` | The three crayon drawings, saved in the repo |
+| `icons/` | Small marks on the technology chips |
+| `banner.png` | The banner at the top of this README |
 
 Body type is DM Sans. The title and the small handwritten hint use Caveat. Both are loaded from Google Fonts. The page background is `#07080b`. The accent shifts with the sky: gold at dusk, cooler slate in cloud and rain, and purple in a storm.
 
@@ -47,9 +48,9 @@ The anime row scrolls one card at a time, from the buttons, the arrow keys, or t
 
 ### Icons
 
-The header on the page, and the image at the top of this file, use the same script icon as the favicon, set beside the title. The title is set in Caveat. Under the description are pills for HTML, CSS, JavaScript, and Tailwind, then sixteen tiles that step through the same 4 by 4 Bayer matrix as the sky, from one dot to a solid block. `banner.png` is that header on a flat background, so it can sit here and in link previews. On the site the ramp is `icons/dither-ramp.svg`, and the sky still moves behind it.
+The image at the top of this file is the project banner. It uses the same script icon as the favicon, set beside a Caveat title. Under the description are pills for HTML, CSS, JavaScript, and Tailwind, then sixteen tiles that step through the same 4 by 4 Bayer matrix as the sky, from one dot to a solid block. That banner is only in this README. On the site the name stays in DM Sans, with the handwritten line under it.
 
-A few projects use crayon drawings from [trazo-stickers](https://www.npmjs.com/package/trazo-stickers). `stickers.js` is an ES module. An import map points `trazo-stickers/svg` at the package in `node_modules`. The script finds each `[data-sticker]` and writes an SVG at the size and rotation set on that element. CourseRadar uses the open book, Guess The Pokemon uses the question mark, and Discord Forecast uses the cloud.
+A few projects use crayon drawings from [trazo-stickers](https://www.npmjs.com/package/trazo-stickers). The open book, question mark, and cloud are saved in `vendor/trazo-stickers.js`, so a static deploy includes them without `node_modules`. `stickers.js` is an ES module. It finds each `[data-sticker]` and writes an SVG at the size and rotation set on that element. CourseRadar uses the open book, Guess The Pokemon uses the question mark, and Discord Forecast uses the cloud.
 
 The technology chips use the SVGs in `icons/`. Most of them are [Simple Icons](https://simpleicons.org/), saved in the repo and tinted with the brand color. Express is a small custom mark, because the official wordmark does not stay readable at chip size. PixiJS uses the official P.
 
@@ -57,10 +58,9 @@ The favicon is a single brush-script "i", centered on a near-black square with t
 
 ## Run it locally
 
-The stickers are loaded as a module, so the page needs a local server. Opening `index.html` as a file will leave those icons blank.
+The stickers are loaded as a module, so the page needs a local server. Opening `index.html` as a file will leave those icons blank. `npm install` is not required for them.
 
 ```bash
-npm install
 npx serve .
 ```
 
